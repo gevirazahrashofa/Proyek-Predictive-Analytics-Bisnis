@@ -92,18 +92,26 @@ Tidak ada missing values pada dataset, sehingga tidak diperlukan penanganan khus
 Analisis ini mengevaluasi distribusi kategori dan angka pada setiap fitur untuk memahami pola umum data serta mendeteksi outlier atau ketidakseimbangan.
 
 #### Distribusi Variabel Kategorikal
-GAMBAR
+
+<img src="https://drive.google.com/uc?export=view&id=1wGzE8CBMQ2cDjrTlFE-xDHT_YbmV738u" width="300"/>
+
+Hanya terdapat 2 sample Built Area pada fitur Area Type, maka kedua sample ini akan dihapus.
+
+<img src="https://drive.google.com/uc?export=view&id=179V9qGfw7AmLN8scUgRSlbQQrzu-cZ5Z" width="300"/>
+
+Fitur Floor dan Area Locality memiliki banyak sekali nilai unik, maka kedua fitur ini juga akan dihapus.
+
+<img src="https://drive.google.com/uc?export=view&id=1apBlYz7wvdIOI3N44D9bfXivG_qhoIa5" width="300"/>
+
 Fitur kategorik City, Furnishing Status, dan Tenant Preferred memiliki sebaran sample yang cukup merata.
 + City: Properti paling banyak berasal dari Mumbai, paling sedikit dari Kolkata.
 + Furnishing Status: Mayoritas properti berstatus Semi-Furnished.
 + Tenant Preferred: Mayoritas properti menerima Bachelors/Family.
-GAMBAR
-Hanya terdapat 2 sample Built Area pada fitur Area Type, maka kedua sample ini akan dihapus.
-GAMBAR
-Fitur Floor dan Area Locality memiliki banyak sekali nilai unique, maka kedua fitur ini juga akan dihapus.
 
 #### Distribusi Variabel Numerik
-GAMBAR
+
+<img src="https://drive.google.com/uc?export=view&id=1SeVqYjR2D-ReG2duLlYppQgJcQ4g4OT3" width="300"/>
+
 Distribusi Rent dan Size condong ke kanan (right-skewed), menunjukkan banyak properti dengan harga sewa dan ukuran rendah. Sebagian kecil data menunjukkan nilai ekstrem (outlier).
 
 ### Multivariate Analysis
