@@ -83,7 +83,7 @@ Pada tahap ini, dilakukan eksplorasi dan pemahaman mendalam tentang dataset yang
 
 Pemeriksaan dilakukan untuk mengetahui kolom yang memiliki nilai hilang agar dapat ditangani dengan tepat.
 
-<img src="https://drive.google.com/uc?export=view&id=1fPQ7YwrQ_1Z6g8N-_dcxNvLlyBZQEyug" width="300"/>
+<img src="https://drive.google.com/uc?export=view&id=1fPQ7YwrQ_1Z6g8N-_dcxNvLlyBZQEyug" width="200"/>
 
 Tidak ada missing values pada dataset, sehingga tidak diperlukan penanganan khusus.
 
@@ -93,7 +93,7 @@ Analisis ini mengevaluasi distribusi kategori dan angka pada setiap fitur untuk 
 
 #### Distribusi Variabel Kategorikal
 
-<img src="https://drive.google.com/uc?export=view&id=1wGzE8CBMQ2cDjrTlFE-xDHT_YbmV738u" width="300"/>
+<img src="https://drive.google.com/uc?export=view&id=1wGzE8CBMQ2cDjrTlFE-xDHT_YbmV738u" width="250"/>
 
 Hanya terdapat 2 sample Built Area pada fitur Area Type, maka kedua sample ini akan dihapus.
 
