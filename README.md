@@ -115,11 +115,95 @@ Fitur kategorik City, Furnishing Status, dan Tenant Preferred memiliki sebaran s
 Distribusi Rent dan Size condong ke kanan (right-skewed), menunjukkan banyak properti dengan harga sewa dan ukuran rendah. Sebagian kecil data menunjukkan nilai ekstrem (outlier).
 
 ### Multivariate Analysis
-### Identifikasi Outlier
-### Penambahan Fitur
+
+Multivariate analysis dilakukan untuk memahami hubungan antar beberapa variabel dalam dataset yang telah dibersihkan.
+
+#### Analisis untuk Fitur Numerik
+
++ Menambahkan Fitur Price_per_sqft
+
+GAMBAR
+
+Menambahkan kolom baru dengan rumus (Rent * 1000) / Size untuk menghitung harga sewa per sqft, agar perbandingan properti lebih objektif dan memudahkan deteksi outlier.
+
++ Menghapus Outlier Ukuran per BHK
+
+GAMBAR
+
+Menghapus data dengan rasio Size/BHK < 300 karena ukuran terlalu kecil per kamar tidur dianggap tidak realistis dan berpotensi merupakan kesalahan input.
+
++ Menghapus Outlier Price_per_sqft
+
+GAMBAR
+
+Menghapus data di luar satu standar deviasi dari rata-rata Price_per_sqft per kota untuk menghindari bias geografis dan menjaga data tetap relevan.
+
++ Menghapus Outlier Jumlah Kamar Mandi
+
+GAMBAR
+
+Menghapus data dengan jumlah kamar mandi lebih dari BHK + 2 karena dianggap tidak wajar dan kemungkinan merupakan kesalahan input.
+
++ Menghapus Kolom Price_per_sqft
+
+GAMBAR
+
+Menghapus kolom setelah digunakan untuk filtering karena tidak dibutuhkan dalam model akhir, agar dataset lebih ringkas.
+
++ Melihat kolerasi antara semua fitur numerik
+
+GAMBAR
+
+#### Analisis untuk Fitur Kategorik
+
++ Rata-rata 'Rent' Relatif terhadap Area Type
+
+GAMBAR
+
++ Rata-rata 'Rent' Relatif terhadap City
+
+GAMBAR
+
++ Rata-rata 'Rent' Relatif terhadap Furnishing Status
+
+GAMBAR
+
++ Rata-rata 'Rent' Relatif terhadap Tenand Preferred
+
+GAMBAR
 
 ## Data Preparation
 
+Pada tahap ini, dilakukan pembersihan, transformasi, dan pemilihan data untuk memastikan kualitas dan relevansi data yang digunakan. 
+
++ One-Hot Encoding
+
+Kolom kategorikal seperti *Area Type*, *City*, *Furnishing Status*, dan *Tenant Preferred* diubah menggunakan teknik One-Hot Encoding karena model machine learning hanya dapat memproses data numerik. Metode ini dipilih karena tidak memberikan urutan pada kategori, dan penggunaan `drop_first=True` membantu menghindari multicollinearity antar variabel dummy.
+
+GAMBAR
+
++ Pembagian Data (Train-Test Split)
+
+Pembagian data dilakukan dengan teknik Train-Test Split, menggunakan rasio 80% untuk training dan 20% untuk testing. Pembagian ini penting untuk melatih model pada data training dan menguji kinerjanya pada data testing untuk mengukur kemampuan generalisasi. random_state=42 digunakan agar pembagian data tetap konsisten setiap kali eksekusi ulang.
+
+GAMBAR
+
++ Normalisasi Fitur Numerik
+
+Fitur numerik seperti Size, BHK, dan Bathroom dinormalisasi menggunakan teknik Min-Max Scaling. Ini dilakukan karena fitur-fitur tersebut memiliki skala yang berbeda, yang dapat memengaruhi kinerja model berbasis jarak atau gradien. MinMaxScaler mengubah nilai ke dalam rentang 0-1 agar setiap fitur memberikan kontribusi yang seimbang. Normalisasi dilakukan dengan scaler.fit_transform() pada data training dan scaler.transform() pada data testing untuk mencegah kebocoran data.
+
+GAMBAR
+
 ## Modelling
+
+Dalam tahap ini, beberapa algoritma regresi diimplementasikan, dievaluasi, dan dibandingkan untuk menemukan model terbaik yang sesuai dengan tujuan proyek.
+
+### Algoritma yang Digunakan
+#### Regresi Linear:
+#### Random Forest Regressor:
+#### Gradient Boosting Regressor:
+### Hyperparameter Tuning
+### Pemilihan Model Terbaik
+### Kesimpulan Modeling
 
 ## Evaluation
