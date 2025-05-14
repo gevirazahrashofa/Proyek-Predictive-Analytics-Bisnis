@@ -3,24 +3,23 @@
 
 ## Domain Proyek
 
-Ketersediaan hunian yang layak dan terjangkau menjadi aspek penting dalam pembangunan berkelanjutan, terutama di wilayah dengan urbanisasi tinggi seperti aglomerasi Yogyakarta. Pertumbuhan penduduk mendorong meningkatnya permintaan rumah sewa dan fluktuasi harga yang dipengaruhi oleh berbagai faktor, seperti karakteristik rumah tangga, fisik bangunan, dan lingkungan sekitar.
+Pasar persewaan rumah di kota-kota besar India seperti Bangalore, Mumbai, dan Delhi mengalami pertumbuhan yang pesat seiring dengan meningkatnya urbanisasi, mobilitas penduduk, dan dinamika ekonomi. Dalam konteks ini, penetapan harga sewa yang akurat dan adil menjadi aspek krusial bagi pemilik properti, penyewa, dan agen real estat.
 
-Di era modern, pasar penyewaan rumah memainkan peran vital dalam mendukung mobilitas penduduk dan menjadi sumber pendapatan bagi pemilik properti. Penentuan harga sewa yang akurat sangat penting bagi pemilik, penyewa, maupun agen properti untuk memastikan keadilan, efisiensi, dan daya saing di pasar.
+Penentuan harga sewa tidak hanya dipengaruhi oleh lokasi, tetapi juga oleh berbagai karakteristik properti seperti ukuran, jumlah kamar tidur, jumlah kamar mandi, status perabotan, dan jenis area. Memahami hubungan antara fitur-fitur ini dan harga sewa menjadi kunci untuk menciptakan pasar yang lebih efisien dan transparan.
 
 ### Latar Belakang
 
-Secara tradisional, penentuan harga sewa rumah seringkali dilakukan secara subjektif berdasarkan intuisi pemilik atau perbandingan sederhana terhadap properti serupa di sekitar lokasi. Pendekatan ini memiliki sejumlah keterbatasan:
-+ Rentan terhadap bias pribadi yang dapat menyebabkan harga tidak adil atau tidak sesuai pasar.
-+ Proses penilaian manual memakan waktu dan tidak skalabel di pasar yang dinamis.
-+ Sulit menangkap kompleksitas hubungan antara faktor-faktor seperti lokasi, luas bangunan, atau aksesibilitas terhadap harga sewa.
+Secara tradisional, penetapan harga sewa rumah seringkali dilakukan secara subjektif, berdasarkan intuisi pemilik atau perbandingan informal dengan properti sejenis. Pendekatan ini memiliki sejumlah kelemahan:
 
-Prediksi harga sewa rumah yang akurat sangat penting untuk menciptakan pasar yang adil dan efisien. Bagi pemilik, hal ini membantu menetapkan harga yang tepat agar properti cepat tersewa tanpa merugi. Bagi penyewa, prediksi harga membantu dalam merencanakan anggaran dan menghindari harga yang tidak wajar. Selain itu, prediksi yang akurat juga mendukung pengambilan keputusan bagi agen properti, pengembang, dan investor dalam menentukan strategi bisnis mereka.
++ Rentan terhadap bias dan ketidakakuratan harga.
++ Tidak efisien dalam skala besar, terutama di pasar yang cepat berubah.
++ Tidak mempertimbangkan pengaruh multivariat dari berbagai fitur secara bersamaan.
 
-Untuk menjawab tantangan ini, pendekatan berbasis machine learning menawarkan solusi yang andal. Dengan memanfaatkan data historis, machine learning dapat mengungkap pola kompleks dan membangun model prediktif yang:
-+ Memberikan estimasi harga sewa dengan tingkat akurasi tinggi.
-+ Mengidentifikasi faktor-faktor dominan yang memengaruhi harga.
-+ Mengadaptasi model terhadap dinamika pasar secara real time.
-+ Menghasilkan output secara cepat dan efisien dalam skala besar.
+Dengan memanfaatkan data historis dari berbagai kota besar di India, pendekatan berbasis machine learning dapat mengidentifikasi pola-pola kompleks dalam data dan menghasilkan prediksi harga sewa yang lebih akurat. Pendekatan ini bermanfaat bagi:
+
++ Pemilik properti: Menentukan harga optimal agar properti cepat tersewa tanpa merugi.
++ Penyewa: Membantu menyusun anggaran dan mengenali harga pasar yang wajar.
++ Agen properti dan pengembang: Menyusun strategi bisnis berbasis data.
 
 Referensi: [Analisis Faktor-Faktor yang Mempengaruhi Harga Rumah di Area Aglomerasi Yogyakarta](https://ejournal.undip.ac.id/index.php/pwk/article/view/37603)
 
@@ -28,30 +27,28 @@ Referensi: [Analisis Faktor-Faktor yang Mempengaruhi Harga Rumah di Area Aglomer
 
 ### Problem Statements
 
-+ Bagaimana membangun model machine learning yang akurat dan andal untuk memprediksi harga sewa rumah berdasarkan fitur-fitur seperti ukuran, jumlah kamar, jumlah kamar mandi, jenis area, kota, status perabotan, dan preferensi penyewa?
-+ Fitur properti mana yang paling memengaruhi harga sewa rumah, dan bagaimana tingkat pengaruh relatif masing-masing fitur terhadap variasi harga?
-+ Bagaimana memilih dan mengoptimalkan model terbaik untuk mencapai prediksi harga yang akurat, efisien, dan mampu beradaptasi dengan data baru?
++ Bagaimana membangun model machine learning untuk memprediksi harga sewa berdasarkan fitur seperti ukuran, kamar, kamar mandi, perabotan, jenis area, dan kota?
++ Fitur mana yang paling berpengaruh terhadap harga sewa, dan seberapa besar pengaruhnya?
++ Bagaimana memilih dan mengoptimalkan model terbaik agar prediksi harga sewa lebih akurat dan efisien?
 
 ### Goals
 
-+ Mengembangkan model prediksi harga sewa rumah dengan kesalahan rendah (MSE, RMSE, MAE) dan akurasi tinggi (R-squared) menggunakan data historis properti.
-+ Mengidentifikasi fitur paling berpengaruh terhadap harga sewa dengan:
-  + Analisis korelasi.
-  + Interpretasi feature importance dari model seperti Random Forest dan Gradient Boosting.
-+ Membandingkan dan mengoptimalkan berbagai model machine learning (Linear Regression, Random Forest, Gradient Boosting) untuk mencari kombinasi terbaik melalui evaluasi dan tuning hyperparameter.
++ Membangun model prediksi harga sewa rumah dengan error rendah (MSE, RMSE, MAE) dan akurasi tinggi (R²) menggunakan data dari berbagai kota besar di India.
++ Mengidentifikasi fitur paling berpengaruh terhadap harga sewa melalui analisis korelasi dan interpretasi feature importance dari model.
++ Membandingkan dan mengoptimalkan berbagai algoritma machine learning untuk memilih model terbaik.
 
 ### Solution Statements
 
-+ Mengembangkan tiga model regresi yang berbeda, yaitu Regresi Linear, Random Forest Regressor, dan Gradient Boosting Regressor, untuk memprediksi harga sewa rumah. Semua model akan dievaluasi dengan metrik seperti MSE, RMSE, MAE, dan R-squared. Model-model ini dipilih karena:
-  + Regresi Linear: Sebagai model dasar untuk memahami hubungan linear antara fitur dan target.
-  + Random Forest Regressor: Mampu menangani non-linearitas dan memberikan informasi tentang pentingnya fitur.
-  + Gradient Boosting Regressor: Model ensemble yang kuat dengan potensi akurasi tinggi.
++ Membangun tiga model regresi utama:
+  + Linear Regression: Sebagai baseline untuk hubungan linear antara fitur dan target.
+  + Random Forest Regressor: Untuk menangani hubungan non-linear dan mengevaluasi pentingnya fitur.
+  + Gradient Boosting Regressor: Model ensemble dengan potensi akurasi tinggi dalam prediksi.
 + Melakukan hyperparameter tuning pada model Random Forest Regressor menggunakan teknik GridSearchCV. Tujuannya adalah meningkatkan performa model dengan kombinasi parameter optimal. Hyperparameter yang akan di tuning:
   + `n_estimators`: Jumlah pohon dalam hutan.
   + `max_depth`: Kedalaman maksimum pohon.
   + `min_samples_split`: Jumlah minimum sampel yang diperlukan untuk membagi node internal.
   + `min_samples_leaf`: Jumlah minimum sampel yang diperlukan untuk berada di node daun.
-+ Membandingkan performa sebelum dan sesudah tuning untuk memastikan peningkatan akurasi, dan memilih model akhir yang paling optimal untuk digunakan dalam prediksi nyata.
++ Membandingkan performa model sebelum dan sesudah tuning, serta memilih model akhir yang paling optimal untuk prediksi harga sewa nyata.
 
 ## Data Understanding
 
@@ -83,7 +80,7 @@ Pada tahap ini, dilakukan eksplorasi dan pemahaman mendalam tentang dataset yang
 
 Pemeriksaan dilakukan untuk mengetahui kolom yang memiliki nilai hilang agar dapat ditangani dengan tepat.
 
-<img src="https://drive.google.com/uc?export=view&id=1fPQ7YwrQ_1Z6g8N-_dcxNvLlyBZQEyug" width="200"/>
+![image](https://github.com/user-attachments/assets/e3ea36db-d78c-4824-a2af-428522724cf1)
 
 Tidak ada missing values pada dataset, sehingga tidak diperlukan penanganan khusus.
 
@@ -92,25 +89,24 @@ Tidak ada missing values pada dataset, sehingga tidak diperlukan penanganan khus
 Analisis ini mengevaluasi distribusi kategori dan angka pada setiap fitur untuk memahami pola umum data serta mendeteksi outlier atau ketidakseimbangan.
 
 #### Distribusi Variabel Kategorikal
+![image](https://github.com/user-attachments/assets/c63f47d5-ced0-443b-ad67-c4e71612b577)
 
-<img src="https://drive.google.com/uc?export=view&id=1wGzE8CBMQ2cDjrTlFE-xDHT_YbmV738u" width="250"/>
++ Hanya terdapat 2 sample Built Area pada fitur Area Type, maka kedua sample ini akan dihapus.
 
-Hanya terdapat 2 sample Built Area pada fitur Area Type, maka kedua sample ini akan dihapus.
+![image](https://github.com/user-attachments/assets/58e0516d-e638-4b8c-b392-8f47126cbc77)
 
-<img src="https://drive.google.com/uc?export=view&id=179V9qGfw7AmLN8scUgRSlbQQrzu-cZ5Z" width="300"/>
++ Fitur kategorik City, Furnishing Status, dan Tenant Preferred memiliki sebaran sample yang cukup merata.
+  + City: Properti paling banyak berasal dari Mumbai, paling sedikit dari Kolkata.
+  + Furnishing Status: Mayoritas properti berstatus Semi-Furnished.
+  + Tenant Preferred: Mayoritas properti menerima Bachelors/Family.
 
-Fitur Floor dan Area Locality memiliki banyak sekali nilai unik, maka kedua fitur ini juga akan dihapus.
+![image](https://github.com/user-attachments/assets/d7888680-fa75-42ce-a4a9-f8c924120505)
 
-<img src="https://drive.google.com/uc?export=view&id=1apBlYz7wvdIOI3N44D9bfXivG_qhoIa5" width="300"/>
-
-Fitur kategorik City, Furnishing Status, dan Tenant Preferred memiliki sebaran sample yang cukup merata.
-+ City: Properti paling banyak berasal dari Mumbai, paling sedikit dari Kolkata.
-+ Furnishing Status: Mayoritas properti berstatus Semi-Furnished.
-+ Tenant Preferred: Mayoritas properti menerima Bachelors/Family.
++ Fitur Floor dan Area Locality memiliki banyak sekali nilai unik, maka kedua fitur ini juga akan dihapus.
 
 #### Distribusi Variabel Numerik
 
-<img src="https://drive.google.com/uc?export=view&id=1SeVqYjR2D-ReG2duLlYppQgJcQ4g4OT3" width="300"/>
+![image](https://github.com/user-attachments/assets/edfccfd5-a9da-4193-9944-093ba4ea5907)
 
 + Sebagian besar properti memiliki 1 hingga 3 kamar tidur, dengan 2 BHK sebagai yang paling umum.
 + Distribusi sewa miring ke kanan, menunjukkan sebagian besar properti disewa dengan harga rendah hingga sedang, namun ada outlier dengan harga sangat tinggi.
@@ -125,62 +121,69 @@ Multivariate analysis dilakukan untuk memahami hubungan antar beberapa variabel 
 
 + Menambahkan Fitur Price_per_sqft
 
+![image](https://github.com/user-attachments/assets/49cfe0d0-6cb1-414f-bedb-749df2cd4cbb)
+
 Menambahkan kolom baru dengan rumus (Rent * 1000) / Size untuk menghitung harga sewa per sqft, agar perbandingan properti lebih objektif dan memudahkan deteksi outlier.
 
 + Menghapus Outlier Ukuran per BHK
-
-<img src="https://drive.google.com/uc?export=view&id=1F69SYZtsliEENr-9UqTUfX_8Z-hjkQWo" width="300"/>
-
+  
 Menghapus data dengan rasio Size/BHK < 300 karena ukuran terlalu kecil per kamar tidur dianggap tidak realistis dan berpotensi merupakan kesalahan input.
+
+![image](https://github.com/user-attachments/assets/59e9c1c5-29f6-492b-a5c2-67979517ef5b)
+
+Dataset awal memiliki 4744 baris. Setelah menghapus outlier berdasarkan kriteria luas per BHK < 300 sqft, tersisa 4196 baris. Artinya, 548 data dianggap outlier dan dihapus untuk meningkatkan kualitas analisis dan akurasi model prediksi.
 
 + Menghapus Outlier Price_per_sqft
 
-<img src="https://drive.google.com/uc?export=view&id=1xa2b7wAbmsPR_vf0DAfKZtJ0odrJecz6" width="300"/>
-
 Menghapus data di luar satu standar deviasi dari rata-rata Price_per_sqft per kota untuk menghindari bias geografis dan menjaga data tetap relevan.
+
+![image](https://github.com/user-attachments/assets/6dd4bef5-dfa3-4880-9664-d9ecad889d72)
+
+Setelah menghapus outlier berdasarkan 'Price per sqft', jumlah data berkurang dari 4196 menjadi 3699 baris. Ini menunjukkan ada 497 data yang ekstrem dalam hal harga per sqft dan dihapus untuk menjaga validitas model.
 
 + Menghapus Outlier Jumlah Kamar Mandi
 
-<img src="https://drive.google.com/uc?export=view&id=1w7AZiMx5yxPMz9eIynOCuXEtlKqBul87" width="300"/>
-
 Menghapus data dengan jumlah kamar mandi lebih dari BHK + 2 karena dianggap tidak wajar dan kemungkinan merupakan kesalahan input.
+
+![image](https://github.com/user-attachments/assets/632a36e4-dd4f-49c7-806e-c000c1976590)
+
+Outlier berdasarkan jumlah kamar mandi dihapus, data hanya berkurang 3 baris (dari 3699 ke 3696). Artinya, outlier jenis ini relatif sedikit.
 
 + Menghapus Kolom Price_per_sqft
 
 Menghapus kolom setelah digunakan untuk filtering karena tidak dibutuhkan dalam model akhir, agar dataset lebih ringkas.
 
 + Melihat kolerasi antara semua fitur numerik
+  
+![image](https://github.com/user-attachments/assets/dc138c11-330b-4817-be27-f409718d331d)
 
-<img src="https://drive.google.com/uc?export=view&id=1DFRnNUlkvXdmMsm0j0oGeXrSOSMJxl1D" width="300"/>
-
-+ BHK & Bathroom: Korelasi sangat tinggi (1).
-+ Size & (BHK, Bathroom): Korelasi positif kuat (0.79, 0.75).
-+ Rent & (BHK, Size, Bathroom): Korelasi positif sedang (0.5, 0.5, 0.6).
+  + BHK & Bathroom: Korelasi sangat tinggi (1).
+  + Size & (BHK, Bathroom): Korelasi positif kuat (0.79, 0.75).
+  + Rent & (BHK, Size, Bathroom): Korelasi positif sedang (0.5, 0.5, 0.6).
 
 #### Analisis untuk Fitur Kategorik
 
 + Rata-rata 'Rent' Relatif terhadap Area Type
-
-<img src="https://drive.google.com/uc?export=view&id=1dJeMBeW3zzTKkwd--48D0F6Y9lMPU-OE" width="500"/>
-
+  
+![image](https://github.com/user-attachments/assets/77437e38-f35a-4d6f-aa5c-ed1171a29e01)
 
 Carpet Area" memiliki harga sewa rata-rata yang jauh lebih tinggi daripada "Super Area
 
 + Rata-rata 'Rent' Relatif terhadap City
-
-<img src="https://drive.google.com/uc?export=view&id=1CoAlMXPKq-kutJ3FSICo6jorDCu2U9RS" width="500"/>
+  
+![image](https://github.com/user-attachments/assets/3062b126-fd6b-4647-950e-dcdbec551de9)
 
 Mumbai memiliki rata-rata harga sewa jauh lebih tinggi dari kota lain.
 
 + Rata-rata 'Rent' Relatif terhadap Furnishing Status
-
-<img src="https://drive.google.com/uc?export=view&id=1PGcqHd3THPaxI4wQ3lWHppLimgBToczW" width="500"/>
+  
+![image](https://github.com/user-attachments/assets/3607058b-c6ef-4ea3-a6c6-1129572ed7f2)
 
 Properti Furnished memiliki rata-rata sewa tertinggi, diikuti Semi-Furnished, lalu Unfurnished, menunjukkan bahwa semakin lengkap perabot, semakin tinggi harga sewanya.
 
 + Rata-rata 'Rent' Relatif terhadap Tenand Preferred
 
-<img src="https://drive.google.com/uc?export=view&id=1xTa2O5p8EajrqEkN0_YzZg8I_tHlBnjR" width="500"/>
+![image](https://github.com/user-attachments/assets/64ef768a-abc2-462e-9c8f-b95f9e4b2e40)
 
 Properti yang disewakan untuk Family memiliki rata-rata sewa tertinggi, disusul Bachelors Tenand Preferred, lalu Bachelors/Family, menunjukkan preferensi penyewa memengaruhi besaran harga sewa.
 
@@ -192,21 +195,19 @@ Pada tahap ini, dilakukan pembersihan, transformasi, dan pemilihan data untuk me
 
 Kolom kategorikal seperti *Area Type*, *City*, *Furnishing Status*, dan *Tenant Preferred* diubah menggunakan teknik One-Hot Encoding karena model machine learning hanya dapat memproses data numerik. Metode ini dipilih karena tidak memberikan urutan pada kategori, dan penggunaan `drop_first=True` membantu menghindari multicollinearity antar variabel dummy.
 
-<img src="https://drive.google.com/uc?export=view&id=1xZ6S0AcYrcDkR_l4gGyfzeOcFRKWIqFL" width="400"/>
+![image](https://github.com/user-attachments/assets/9f76b796-33bb-4684-8057-706955e44d45)
 
 + Pembagian Data (Train-Test Split)
 
-Pembagian data dilakukan dengan teknik Train-Test Split, menggunakan rasio 80% untuk training dan 20% untuk testing. Pembagian ini penting untuk melatih model pada data training dan menguji kinerjanya pada data testing untuk mengukur kemampuan generalisasi. random_state=42 digunakan agar pembagian data tetap konsisten setiap kali eksekusi ulang.
+Pembagian data dilakukan dengan teknik Train-Test Split, data dibagi menjadi 80% untuk training (2956 data) dan 20% untuk testing (740 data). Ini memastikan model bisa belajar dari data yang cukup dan diuji pada data yang belum pernah dilihat.
 
-<img src="https://drive.google.com/uc?export=view&id=1PCT-jSkWzefuGA8xa9BN516HqoWfUe8G" width="300"/>
-
-Data dibagi menjadi 2956 sampel untuk pelatihan (dengan 13 fitur dan target) dan 740 sampel untuk pengujian (juga dengan 13 fitur dan target).
+![image](https://github.com/user-attachments/assets/cceaca77-f99a-4b93-b88e-2fa5e9426b8d)
 
 + Normalisasi Fitur Numerik
 
 Fitur numerik seperti Size, BHK, dan Bathroom dinormalisasi menggunakan teknik Min-Max Scaling. Ini dilakukan karena fitur-fitur tersebut memiliki skala yang berbeda, yang dapat memengaruhi kinerja model berbasis jarak atau gradien. MinMaxScaler mengubah nilai ke dalam rentang 0-1 agar setiap fitur memberikan kontribusi yang seimbang. Normalisasi dilakukan dengan scaler.fit_transform() pada data training dan scaler.transform() pada data testing untuk mencegah kebocoran data.
 
-<img src="https://drive.google.com/uc?export=view&id=1wkh_X1N-ZTnFgBMozJM_iB4KBfmx8rQc" width="400"/>
+![image](https://github.com/user-attachments/assets/e454092f-9b67-4f5a-bd7a-0f7c7b693a44)
 
 ## Modelling
 
@@ -250,39 +251,45 @@ Tuning dilakukan pada model Random Forest Regressor untuk meningkatkan akurasi d
 + min_samples_split: [2, 5, 10]
 + min_samples_leaf: [1, 2, 4]
 
-### Pemilihan Model Terbaik
-
-Metrik Evaluasi: R-squared (R²)
-
-Model terbaik dipilih berdasarkan nilai R² tertinggi pada data testing. Setelah membandingkan performa Regresi Linear, Random Forest (sebelum dan sesudah tuning), dan Gradient Boosting, model dengan nilai R² tertinggi dipilih karena paling akurat dalam menjelaskan variabilitas target dan memiliki generalisasi terbaik terhadap data baru.
-
 ## Evaluation
 
 Evaluasi model dilakukan untuk menilai seberapa baik model dalam memprediksi harga sewa rumah. Dalam proyek ini, digunakan empat metrik regresi utama yang memberikan gambaran menyeluruh terhadap akurasi dan kesalahan prediksi model:
 
 ### Mean Squared Error (MSE)
 
-MSE mengukur rata-rata kuadrat selisih antara nilai prediksi dan nilai sebenarnya. Metrik ini menekankan kesalahan besar karena selisih dikalikan dengan dirinya sendiri. Semakin kecil nilai MSE, semakin baik kinerja model.
+MSE menghitung rata-rata dari kuadrat selisih antara nilai aktual (yᵢ) dan nilai prediksi (ŷᵢ). Karena selisihnya dikuadratkan, MSE memberikan penalti besar terhadap kesalahan prediksi yang besar.
 
 `MSE = (1/n) * Σ(yᵢ - ŷᵢ)²`
 
+Alasan Penggunaan:
+MSE sangat berguna untuk mengidentifikasi model yang membuat kesalahan besar, karena ia memberikan bobot lebih pada outlier. Cocok untuk mendeteksi apakah model membuat prediksi yang benar-benar meleset.
+
 ### Root Mean Squared Error (RMSE)
 
-RMSE adalah akar dari MSE dan memiliki satuan yang sama dengan target (harga sewa), sehingga lebih mudah diinterpretasikan. Nilai RMSE yang rendah menunjukkan model melakukan prediksi dengan error yang kecil.
+RMSE adalah akar dari MSE. Nilai ini mengembalikan satuan ke dalam unit target (dalam proyek ini: Rupee), sehingga lebih mudah diinterpretasikan secara langsung sebagai rata-rata error prediksi.
 
 `RMSE = √MSE`
 
+Alasan Penggunaan:
+RMSE memberikan gambaran yang intuitif tentang seberapa jauh, secara rata-rata, prediksi menyimpang dari nilai asli. Sangat berguna dalam konteks bisnis karena menggunakan satuan yang sama dengan harga sewa.
+
 ### Mean Absolute Error (MAE)
 
-MAE menghitung rata-rata dari selisih absolut antara nilai prediksi dan nilai sebenarnya. Tidak seperti MSE/RMSE, MAE tidak memperbesar pengaruh outlier. Metrik ini memberikan gambaran seberapa besar kesalahan rata-rata tanpa arah.
+MAE menghitung rata-rata dari selisih absolut antara prediksi dan nilai aktual. Berbeda dengan MSE/RMSE, MAE tidak memperbesar efek dari outlier.
 
 `MAE = (1/n) * Σ|yᵢ - ŷᵢ|`
 
+Alasan Penggunaan:
+MAE memberikan gambaran rata-rata error secara seimbang tanpa memperbesar kesalahan besar. Berguna sebagai pembanding MSE/RMSE untuk melihat apakah error ekstrem mendistorsi evaluasi model.
+
 ### R-squared (R²)
 
-R² menunjukkan seberapa besar variasi harga sewa yang bisa dijelaskan oleh model. Nilai R² berada antara 0 dan 1, dengan nilai mendekati 1 menandakan bahwa model mampu menjelaskan hampir seluruh variasi data target.
+R² mengukur proporsi variasi pada variabel target (y) yang dapat dijelaskan oleh variabel input (X). Nilainya antara 0 dan 1, di mana semakin mendekati 1 berarti model menjelaskan lebih banyak variasi dalam data.
 
 `R² = 1 - (Σ(yᵢ - ŷᵢ)² / Σ(yᵢ - ȳ)²)`
+
+Alasan Penggunaan:
+R² menunjukkan seberapa baik model menjelaskan data. Dalam konteks regresi harga, ini penting untuk menilai apakah model menangkap hubungan antar fitur dengan baik atau tidak.
 
 Berikut adalah hasil evaluasi untuk setiap model yang dikembangkan:
 
@@ -298,3 +305,4 @@ Model Gradient Boosting Regressor menunjukkan kinerja terbaik secara keseluruhan
 Kesimpulan keseluruhan : 
 
 Model Gradient Boosting Regressor terbukti paling akurat dalam memprediksi harga sewa rumah, mengungguli Random Forest dan Linear Regression. Fitur seperti ukuran rumah dan jumlah kamar mandi berpengaruh besar terhadap harga. Model ini bermanfaat bagi agen properti atau penyewa untuk estimasi harga sewa secara cepat. Namun, model masih terbatas karena belum mempertimbangkan faktor eksternal seperti lokasi detail atau kondisi pasar. Ke depan, model dapat ditingkatkan dengan penambahan fitur, tuning hyperparameter, dan uji pada data lain. Hasil ini sejalan dengan penelitian lain yang juga menunjukkan keunggulan Gradient Boosting dalam prediksi harga properti.
+
