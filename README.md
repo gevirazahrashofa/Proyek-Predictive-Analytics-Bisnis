@@ -293,16 +293,14 @@ R² menunjukkan seberapa baik model menjelaskan data. Dalam konteks regresi harg
 
 Berikut adalah hasil evaluasi untuk setiap model yang dikembangkan:
 
+| **Model**                   | **MSE**            | **RMSE**      | **MAE**      | **R² Score** | **Kesimpulan**                 |
+| --------------------------- | ------------------ | ------------- | ------------ | ------------ | ------------------------------ |
+| Linear Regression           | 297,106,384.62     | 17,236.77     | 11,325.07    | 0.71         | Terburuk                       |
+| Random Forest Regressor     | 133,767,120.09     | 11,565.77     | 6,792.76     | 0.87         | Alternatif bagus               |
+| Gradient Boosting Regressor | **117,975,329.97** | **10,861.64** | **6,600.55** | **0.88**     | **Terbaik & direkomendasikan** |
 
-| Model                       | MSE                 | RMSE                | MAE                 | R²                  |
-| --------------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| Regresi Linear              | 297106384.62        | 17236.77            | 11325.07            | 0.71                |
-| Random Forest Regressor     | 133767120.09        | 11565.77            | 6792.76             | 0.87                |
-| Gradient Boosting Regressor | 117975329.97        | 10861.64            | 6600.55             | 0.88                |
-
-Model Gradient Boosting Regressor menunjukkan kinerja terbaik secara keseluruhan. Ini ditunjukkan oleh nilai R² tertinggi sebesar 0.88, serta nilai MAE dan RMSE paling rendah dibandingkan model lainnya. Hal ini menunjukkan bahwa model ini paling akurat dalam memprediksi harga sewa rumah. Regresi Linear menunjukkan kinerja terburuk, yang mengindikasikan bahwa hubungan antara fitur dan harga sewa bersifat non-linear dan tidak dapat ditangkap oleh model linier sederhana. Sementara itu, Random Forest Regressor memberikan hasil yang baik dengan R² sebesar 0.87, walaupun sudah dilakukan Hyperparameter Tuning, namun hasilnya masih sedikit di bawah Gradient Boosting.
+Gradient Boosting Regressor memberikan hasil terbaik dengan akurasi tertinggi (R² = 0.88) dan error paling rendah, menjadikannya model paling andal untuk prediksi harga sewa. Random Forest Regressor cukup baik, tapi sedikit di bawahnya. Sementara itu, Linear Regression kurang akurat dan tidak cocok untuk data ini. Jadi disarankan menggunakan Gradient Boosting untuk hasil terbaik.
 
 Kesimpulan keseluruhan : 
 
-Model Gradient Boosting Regressor terbukti paling akurat dalam memprediksi harga sewa rumah, mengungguli Random Forest dan Linear Regression. Fitur seperti ukuran rumah dan jumlah kamar mandi berpengaruh besar terhadap harga. Model ini bermanfaat bagi agen properti atau penyewa untuk estimasi harga sewa secara cepat. Namun, model masih terbatas karena belum mempertimbangkan faktor eksternal seperti lokasi detail atau kondisi pasar. Ke depan, model dapat ditingkatkan dengan penambahan fitur, tuning hyperparameter, dan uji pada data lain. Hasil ini sejalan dengan penelitian lain yang juga menunjukkan keunggulan Gradient Boosting dalam prediksi harga properti.
-
+Proyek ini mengembangkan model prediktif untuk memperkirakan harga sewa rumah di kota-kota besar India, memanfaatkan fitur-fitur properti seperti ukuran, jumlah kamar, fasilitas, dan lokasi. Melalui analisis data dan perbandingan beberapa algoritma regresi, model Gradient Boosting Regressor menunjukkan performa terbaik dengan metrik evaluasi yang paling rendah (MSE, RMSE, MAE) dan skor R^2 tertinggi, menandakan akurasi dan kemampuan generalisasi yang lebih baik dalam memprediksi harga sewa. Hasil ini memberikan landasan yang kuat untuk aplikasi praktis dalam membantu penyewa dan pemilik rumah membuat keputusan yang lebih terinformasi di pasar properti sewa.
